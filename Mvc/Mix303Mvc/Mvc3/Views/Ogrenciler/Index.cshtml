@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Mvc3.Models.Ogrenciler>
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<div class="mt-4">
+    <h2>Ogrenciler Listesi</h2>
+    <p>
+        @Html.ActionLink("Yeni Kayıt", "Create", null, new { @class = "btn btn-dark" })
+    </p>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.OgrenciNo)</th>
+                <th>@Html.DisplayNameFor(model => model.Adi)</th>
+                <th>@Html.DisplayNameFor(model => model.Soyadi)</th>
+                <th>@Html.DisplayNameFor(model => model.Tc)</th>
+                <th>@Html.DisplayNameFor(model => model.Telefon)</th>
+                <th>@Html.DisplayNameFor(model => model.Email)</th>
+                <th>Eylemler</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var x in Model)
+            {
+                <tr>
+                    <td>  @Html.DisplayFor(model => x.OgrenciNo)</td>
+                    <td>  @Html.DisplayFor(model => x.Adi)</td>
+                    <td>  @Html.DisplayFor(model => x.Soyadi)</td>
+                    <td>  @Html.DisplayFor(model => x.Tc)</td>
+                    <td>  @Html.DisplayFor(model => x.Telefon)</td>
+                    <td>  @Html.DisplayFor(model => x.Email)</td>
+                    <td>  @Html.DisplayFor(model => x.Email)</td>
+                    <td>
+                        @Html.ActionLink("Düzenle", "Edit", new { id = x.Id }, new { @class = "btn btn-primary" })
+                        @Html.ActionLink("Ayrıntılar", "Details", new { id = x.Id }, new { @class = "btn btn-success" })
+                        @Html.ActionLink("Sil", "Delete", new { id = x.Id }, new { @class = "btn btn-danger" })
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>

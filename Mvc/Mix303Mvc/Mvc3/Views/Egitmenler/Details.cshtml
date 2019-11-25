@@ -1,0 +1,74 @@
+﻿@model Mvc3.Models.Egitmenler
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Egitmenler</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Brans.BransAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Brans.BransAdi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Adi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Soyadi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Soyadi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EgitmenNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EgitmenNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefon)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Düzenle", "Edit", new { id = Model.Id },new { @class="btn bn-primary"}) |
+    @Html.ActionLink("Listeye geri dön", "Index")
+</p>
